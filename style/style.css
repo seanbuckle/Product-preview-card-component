@@ -156,8 +156,7 @@ img {
     padding-block-end: 1.5rem;
   }
   .card__price {
-    margin-block-start: 1.813rem;
-    margin-block-end: 1.875rem;
+    margin-block: 1.5rem;
   }
 }
 .attribution {
