@@ -81,6 +81,7 @@ img {
 .card__overline {
   padding-block-end: 0.75rem;
   font: var(--font-weight-medium) var(--overline)/normal var(--font-family);
+  letter-spacing: 5px;
   text-transform: uppercase;
 }
 .card__heading {
