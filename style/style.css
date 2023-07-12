@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+* {
+  padding-block: 0;
+  padding-inline: 0;
+  border-block: 0;
+  border-inline: 0;
+  margin-block: 0;
+  margin-inline: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  /* primary */
+  --deep-aquamarine: hsl(158, 36%, 37%);
+  --deep-aquamarine-hover: hsl(158, 42%, 18%);
+  --cream: hsl(30, 38%, 92%);
+  /* neutral */
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  /* fonts */
+  --font-family: "Montserrat", sans-serif;
+  --font-family-secondary: "Fraunces", serif;
+  /* font-size */
+  --display: 2rem;
+  --body: 0.875rem;
+  --btn: 0.875rem;
+  --overline: 0.75rem;
+  --discount: 0.813rem;
+  --attribution: 0.688rem;
+  /* font-weight */
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+}
+
+body {
+  block-size: 100dvh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  font-family: var(--font-family);
+  font-size: var(--body);
+  color: var(--dark-grayish-blue);
+  background-color: var(--cream);
+}
+
+img {
+  display: block;
+  inline-size: 100%;
+}
+
+.site-main {
+  display: grid;
+  place-items: center;
+  container: card/inline-size;
+}
+
+.card {
+  max-inline-size: 343px;
+  border-start-start-radius: 10px;
+  border-start-end-radius: 10px;
+  border-end-start-radius: 10px;
+  border-end-end-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: var(--white);
+}
+.card__img-wrapper {
+  inline-size: 100%;
+}
+.card__img-wrapper--img {
+  border-start-start-radius: 10px;
+  border-start-end-radius: 10px;
+}
+.card__content {
+  inline-size: 100%;
+  padding-block: 24px;
+  padding-inline: 24px;
+}
+.card__overline {
+  padding-block-end: 0.75rem;
+  font: var(--font-weight-medium) var(--overline)/normal var(--font-family);
+  text-transform: uppercase;
+}
+.card__heading {
+  padding-block-end: 1rem;
+  font: var(--font-weight-bold) var(--display)/normal var(--font-family-secondary);
+  line-height: 32px;
+  color: var(--very-dark-blue);
+}
+.card__body {
+  line-height: 23px;
+}
+.card__price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font: var(--font-weight-bold) var(--display)/normal var(--font-family-secondary);
+  color: var(--deep-aquamarine);
+  margin-block-start: 1.25rem;
+  margin-block-end: 1.5rem;
+}
+.card__price--discount {
+  font: var(--font-weight-medium) var(--discount)/normal var(--font-family);
+  color: var(--dark-grayish-blue);
+  text-decoration: line-through;
+  margin-inline-end: 1rem;
+}
+.card__btn {
+  inline-size: 100%;
+  block-size: 3rem;
+  border-start-start-radius: 10px;
+  border-start-end-radius: 10px;
+  border-end-start-radius: 10px;
+  border-end-end-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--deep-aquamarine);
+  color: var(--white);
+  font: var(--font-weight-medium) var(--btn)/normal var(--font-family);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.card__btn:hover {
+  background-color: var(--deep-aquamarine-hover);
+}
+.card__btn--icon {
+  inline-size: 1rem;
+  margin-inline-end: 1rem;
+}
+
+@container card (inline-size > 600px) {
+  .card {
+    max-inline-size: 600px;
+    flex-direction: row;
+  }
+  .card__img-wrapper {
+    inline-size: 50%;
+  }
+  .card__img-wrapper--img {
+    border-start-start-radius: 10px;
+    border-start-end-radius: 0;
+    border-end-start-radius: 10px;
+  }
+  .card__content {
+    inline-size: 50%;
+    padding-block: 32px;
+    padding-inline: 32px;
+  }
+  .card__overline {
+    padding-block-end: 1.25rem;
+  }
+  .card__heading {
+    padding-block-end: 1.5rem;
+  }
+  .card__price {
+    margin-block-start: 1.813rem;
+    margin-block-end: 1.875rem;
+  }
+}
+.attribution {
+  inline-size: 100%;
+  block-size: 4rem;
+  display: grid;
+  place-items: center;
+  font-size: var(--attribution);
+}
+.attribution__link {
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  color: var(--deep-aquamarine);
+}
+.attribution__link:hover {
+  text-decoration: underline;
+  color: var(--deep-aquamarine-hover);
+}
+
+/*# sourceMappingURL=style.css.map */
